@@ -1,0 +1,23 @@
+<div class="edit-form">
+  <form (submit)="onSubmit()">
+    <h3>Use the form below to update your profile</h3>
+    <label for="fullName">Name</label>
+    <input type="text" name="fullName" [(ngModel)]="profile.name" />
+    <label for="contact">Contact</label>
+    <input type="text" name="contact" [(ngModel)]="profile.contact" />
+    <label for="bio">Bio</label>
+    <textarea name="bio" [(ngModel)]="profile.bio" name="bio"></textarea>
+    <button>Update</button>
+  </form>
+</div>
+
+<!-- <form #editForm='ngForm' (ngSubmit)='submitProfile(editForm)'></form> -->
+<!-- the #editForm='ngForm' establishes the entire form as a group -->
+<!-- you would only have one way data binding in the input fields -->
+
+<!-- in typescript...
+submitProfile(form: NgForm) {
+  ...
+} -->
+
+<!-- form.value -->
